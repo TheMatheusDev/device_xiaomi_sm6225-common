@@ -249,9 +249,6 @@ vendor.usb.use_gadget_hal=0
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
 
-# WLAN
-ro.telephony.iwlan_operation_mode=legacy
-
 # SoC
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM6225
