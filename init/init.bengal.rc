@@ -45,3 +45,8 @@ on early-boot
 
 on property:ro.boot.hwname=*
     setprop ro.boot.product.hardware.sku ${ro.boot.hwname}
+
+on property:sys.boot_completed=1
+# Restrict permissions to socket file
+# to hide Magisk & co.
+chmod 440 /proc/net/unix
