@@ -222,3 +222,9 @@ on property:vendor.dcvs.prop=1
 
 on property:vendor.fps_hal.restartimes=max
     stop vendor.fps_hal
+
+service adsprpcd /vendor/bin/adsprpcd
+    class main
+    user media
+    group media
+    disabled
