@@ -72,7 +72,7 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/vm/dirty_background_ratio 10
     
     # Report max frequency to unity tasks
-    write /proc/sys/kernel/sched_lib_name "libunity.so"
+    write /proc/sys/kernel/sched_lib_name "com.miHoYo.,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
     # Setup default schedtune values for foreground/top-app
