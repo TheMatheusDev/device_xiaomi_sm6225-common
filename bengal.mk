@@ -110,10 +110,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
-# Configs File System
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
