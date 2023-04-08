@@ -338,7 +338,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    AOSPABengalFrameworksOverlay \
     BengalCarrierConfigOverlay \
     BengalFrameworksOverlay \
     BengalSettingsOverlay \
