@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
     BengalCarrierConfigOverlay \
     BengalFrameworksOverlay \
     BengalSettingsOverlay \
+    BengalSettingsProviderOverlay \
     BengalSystemUIOverlay \
     BengalWifiOverlay \
     WifiMainline
