@@ -309,6 +309,7 @@ PRODUCT_PACKAGES += \
     BengalFrameworksOverlay \
     BengalSettingsOverlay \
     BengalSystemUIOverlay \
+    BengalSettingsProviderOverlay \
     BengalWifiOverlay
 
 # Public libraries
