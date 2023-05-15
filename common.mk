@@ -210,10 +210,11 @@ PRODUCT_SYSTEM_PROPERTIES += \
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
+    debug.sf.auto_latch_unsignaled=true \
     ro.vendor.display.sensortype=2 \
     vendor.display.idle_time=0 \
     vendor.display.idle_time_inactive=0 \
-    vendor.display.qdcm.mode_combine=2
+    vendor.display.qdcm.mode_combine=2 
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
