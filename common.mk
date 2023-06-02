@@ -60,7 +60,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ODM_PROPERTIES += \
     vendor.audio.feature.dynamic_ecns.enable=false \
-    vendor.audio.hw.aac.encoder=false \
     vendor.audio.offload.buffer.size.kb=256
 
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -69,6 +68,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.audio.button_jack.profile=volume \
     persist.audio.button_jack.switch=0 \
+    persist.vendor.audio.ozo.codec.enable=true \
     ro.audio.monitorRotation=true \
     ro.vendor.audio.afe.record=true \
     ro.vendor.audio.misound.bluetooth.enable=true \
@@ -82,6 +82,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.surround.support=false \
     ro.vendor.audio.vocal.support=false \
     ro.vendor.audio.voice.change.support=true \
+    ro.vendor.audio.voice.change.version=2 \
     vendor.audio.chk.cal.us=0
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -115,6 +116,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.hardware.power.tx_cur_ma=93
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.sys.btsatck.absvolfeature=true \
     persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aac \
     persist.vendor.btstack.aac_frm_ctl.enabled=true \
     persist.vendor.btstack.connect.peer_earbud=true \
@@ -156,7 +158,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera \
-    vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera
+    vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera \
+    persist.vendor.camera.aon.cameraId=8 \
+    persist.vendor.camera.aon8475.cameraId=9
 
 PRODUCT_VENDOR_PROPERTIES += \
     camera.disable_zsl_mode=1
@@ -303,7 +307,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Incremental FS
 PRODUCT_VENDOR_OVERRIDES += \
-    ro.incremental.enable=yes
+    ro.incremental.enable=1
 
 # Keyguard
 PRODUCT_VENDOR_PROPERTIES += \
@@ -315,8 +319,7 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_ODM_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_khaje.xml \
-    vendor.mm.enable.qcom_parser=63963135
+    media.settings.xml=/vendor/etc/media_profiles_khaje.xml
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     debug.stagefright.omx_default_rank=0 \
@@ -329,11 +332,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
     persist.mm.enable.prefetch=true
-
-# Netflix
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b \
-    ro.netflix.signup=1
 
 # Netmgr
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -418,15 +416,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
     persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.enable_temp_dds=true \
     persist.vendor.radio.force_on_dc=true \
-    persist.vendor.radio.manual_nw_rej_ct=1 \
     persist.vendor.radio.mt_sms_ack=30 \
     persist.vendor.radio.process_sups_ind=1 \
-    persist.vendor.radio.report_codec=1 \
-    persist.vendor.radio.snapshot_enabled=1 \
-    persist.vendor.radio.snapshot_timer=5 \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     ro.vendor.radio.features_common=3 \
     ro.vendor.se.type=HCE,UICC \
@@ -509,13 +502,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libwfdaac_vendor:32
 
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    config.disable_rtt=true
-
 # WLAN
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.hardware.wlan.vendor=qcom
+
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.data.iwlan.enable=true \
-    ro.hardware.wlan.dbs=2 \
+    ro.hardware.wlan.dbs=0 \
     ro.telephony.iwlan_operation_mode=legacy
 
 # Zygote
