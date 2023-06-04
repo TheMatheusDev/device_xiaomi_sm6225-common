@@ -175,6 +175,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt
 
 # Charger
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.vendor.quick.charge=1 \
     ro.charger.disable_init_blank=true
