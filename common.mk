@@ -390,6 +390,7 @@ TARGET_BOARD_PLATFORM := bengal
 TARGET_USE_BENGAL_HALS := true
 
 TARGET_COMMON_QTI_COMPONENTS += \
+    alarm \
     audio \
     av \
     bt \
