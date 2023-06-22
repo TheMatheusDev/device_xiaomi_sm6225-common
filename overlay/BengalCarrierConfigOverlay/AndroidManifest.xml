@@ -4,7 +4,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.carrierconfig.overlay.bengal">
+    package="com.android.carrierconfig.overlay.bengal"
+    android:allowBackup="false">
 
     <application 
         android:hasCode="false" />

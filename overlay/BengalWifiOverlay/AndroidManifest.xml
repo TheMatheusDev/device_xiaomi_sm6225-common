@@ -14,7 +14,8 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.wifi.resources.overlay.bengal">
+    package="com.android.wifi.resources.overlay.bengal"
+    android:allowBackup="false">
 
     <application android:hasCode="false"/>
     
