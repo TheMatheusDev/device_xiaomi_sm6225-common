@@ -58,7 +58,7 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/vm/dirty_background_ratio 10
 
     # Report max frequency to unity tasks
-    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_name "com.miHoYo., com.activision., com.epicgames, com.dts., UnityMain, libunity.so, libil2cpp.so, libmain.so, libcri_vip_unity.so, libopus.so, libxlua.so, libUE4.so, libAsphalt9.so, libnative-lib.so, libRiotGamesApi.so, libResources.so, libagame.so, libapp.so, libflutter.so, libMSDKCore.so, libFIFAMobileNeon.so, libUnreal.so, libEOSSDK.so, libcocos2dcpp.so, libfb.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
 
     # Setup default schedtune values for foreground/top-app
