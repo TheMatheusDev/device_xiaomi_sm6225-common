@@ -307,7 +307,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.dbg.wfc_avail_ovr=1
 
 # Incremental FS
-PRODUCT_VENDOR_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.incremental.enable=1
 
 # Keyguard
