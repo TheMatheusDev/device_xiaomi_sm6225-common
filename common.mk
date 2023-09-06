@@ -221,9 +221,7 @@ USE_DEX2OAT_DEBUG := false
 TARGET_USE_QCOM_OFFSET := true
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
-    libdisplayconfig.qti \
-    disable_configstore
+    android.frameworks.displayservice@1.0.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_backpressure=1 \
