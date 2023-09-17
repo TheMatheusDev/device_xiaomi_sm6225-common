@@ -78,7 +78,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES  := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 # DT2W
-TARGET_TAP_TO_WAKE_NODE ?= "/proc/tp_gesture"
+TARGET_TAP_TO_WAKE_NODE ?= "/sys/touchpanel/double_tap"
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(COMMON_PATH)/configs/hidl/xiaomi_common_framework_compatibility_matrix.xml
@@ -165,9 +165,6 @@ TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
-
-# Power
-TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
 
 # qcom/common tree
 include $(QCOM_COMMON_PATH)/BoardConfigQcom.mk
