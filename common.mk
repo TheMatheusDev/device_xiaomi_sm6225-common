@@ -382,16 +382,9 @@ TARGET_COMMON_QTI_COMPONENTS += \
     wfd \
     wlan
 
-# QMI
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.qcomsysd.enabled=1
-
 # Radio
 PRODUCT_PRODUCT_PROPERTIES += \
     rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.telephony.block_binder_thread_on_incoming_calls=false
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.data.iwlan.enable=true \
@@ -433,10 +426,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi
-
-# Storage.xml moment
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.sys.binary_xml=false
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
