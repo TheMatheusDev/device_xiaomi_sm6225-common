@@ -188,6 +188,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.dirac.acs.storeSettings=1 \
     persist.dirac.acs.ignore_error=1
 
+# Cutout
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
 # Display
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
@@ -310,6 +314,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    AvoidAppsInCutoutOverlay \
     BengalCarrierConfigOverlay \
     BengalFrameworksOverlay \
     BengalSettingsOverlay \
