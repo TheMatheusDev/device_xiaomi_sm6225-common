@@ -19,6 +19,14 @@ on init
     chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
     mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
 
+    # Create audio-app cpuset
+    mkdir /dev/cpuset/audio-app
+    copy /dev/cpuset/cpus /dev/cpuset/audio-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/audio-app/mems
+    chown system system /dev/cpuset/audio-app
+    chown system system /dev/cpuset/audio-app/tasks
+    chmod 0664 /dev/cpuset/audio-app/tasks
+
 on fs
     chmod 0644 /mnt/vendor/persist/audio/us_manual_cal
     chmod 0644 /persist/audio/us_manual_cal
