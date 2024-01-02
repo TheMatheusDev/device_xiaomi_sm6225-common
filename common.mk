@@ -320,7 +320,8 @@ PRODUCT_PACKAGES += \
     BengalSettingsOverlay \
     BengalSystemUIOverlay \
     BengalSettingsProviderOverlay \
-    BengalWifiOverlay
+    BengalWifiOverlay \
+    WifiMainline
 
 # Perf
 PRODUCT_COPY_FILES += \
