@@ -18,13 +18,14 @@ property Name is called. -->
     <PerfConfigs>
 
     <!--Vendor Properties -->
-    <Prop Name="vendor.debug.enable.lm" Value="true" />
-    <Prop Name="vendor.iop.enable_iop" Value="0" />
+    <!-- AOSPA Edit: Comment out IOP
     <Prop Name="vendor.iop.enable_uxe" Value="0" />
-    <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
-    <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
     <Prop Name="vendor.enable.prefetch" Value="false" />
     <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
+    <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
+    <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
+    <Prop Name="vendor.iop.enable_iop" Value="0" /> -->
+    <Prop Name="vendor.debug.enable.lm" Value="true" />
 
     <!--System Properties -->
     <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />
@@ -40,7 +41,6 @@ property Name is called. -->
     <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
     <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
     <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
-    <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
     <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
     <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
     <Prop Name="ro.lmk.kill_timeout_ms_dup" Value="0" />
@@ -51,6 +51,14 @@ property Name is called. -->
     <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
     <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
     <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="64" />
+
+    <!-- AOSPA Edit: Enable Preferred Apps -->
+    <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
+    <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+    <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+    <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+    <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+    <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
     
     </PerfConfigs>
 </PerfConfigsStore>
