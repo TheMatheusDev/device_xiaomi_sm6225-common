@@ -46,13 +46,9 @@ on property:vendor.post_boot.parsed=1
 
     # Configure schedutil ratelimits
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us_screen_off 2000
     write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us_screen_off 2000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/pl 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 10000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us_screen_off 2000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us_screen_off 2000
 
@@ -61,11 +57,11 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/kernel/sched_downmigrate "60 75"
     write /proc/sys/kernel/sched_group_upmigrate 95
     write /proc/sys/kernel/sched_group_downmigrate 75
-    
+
     # Back to default VM settings
     write /proc/sys/vm/dirty_expire_centisecs 3000
     write /proc/sys/vm/dirty_background_ratio 10
-    
+
     # Report max frequency to unity tasks
     write /proc/sys/kernel/sched_lib_name "com.miHoYo., com.activision., com.epicgames, com.dts., UnityMain, libunity.so, libil2cpp.so, libmain.so, libcri_vip_unity.so, libopus.so, libxlua.so, libUE4.so, libAsphalt9.so, libnative-lib.so, libRiotGamesApi.so, libResources.so, libagame.so, libapp.so, libflutter.so, libMSDKCore.so, libFIFAMobileNeon.so, libUnreal.so, libEOSSDK.so, libcocos2dcpp.so, libfb.so"
     write /proc/sys/kernel/sched_lib_mask_force 255
