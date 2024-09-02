@@ -117,8 +117,6 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048 \
     kpti=off
 
-TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225-common
 TARGET_KERNEL_VERSION := 4.19
 
 # Media
