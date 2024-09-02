@@ -55,8 +55,7 @@ PRODUCT_PACKAGES += \
 
 # Audio Daemon
 PRODUCT_PACKAGES += \
-    audioadsprpcd \
-    vendor.qti.audio-adsprpc-service.rc
+    audioadsprpcd
 
 # Audio configs
 PRODUCT_COPY_FILES += \
