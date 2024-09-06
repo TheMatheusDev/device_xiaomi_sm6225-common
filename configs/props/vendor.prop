@@ -195,6 +195,10 @@ vendor.netflix.bsp_rev=Q6115-31409-1
 # NFC
 ro.vendor.se.type=HCE,UICC
 
+# Media
+vendor.media.target.version=3
+vendor.media.target_variant=_khaje
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
